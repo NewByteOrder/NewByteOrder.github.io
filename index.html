@@ -18,6 +18,18 @@
 
 </head>
 <body>
-  <h1>New Byte Order</h1>
+  <h1>New Byte Order<span id="cursor">|</span></h1>
+  <script type="text/javascript">
+  var cursor = document.getElementById("cursor");
+  var visible = true;
+  window.setInterval(function(){
+    if(visible) {
+      cursor.style.visibility = "hidden"
+    } else {
+      cursor.style.visibility = 'visible';
+    }
+    visible = !visible;
+  }, 500);
+  </script>
 </body>
 </html>
